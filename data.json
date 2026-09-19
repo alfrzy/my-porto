@@ -1,0 +1,109 @@
+{
+  "name": "Alifatur Al Farizi",
+  "email": "alifaturalfarizi155@email.com",
+  "phone": "+6281548367437",
+  "location": "Semarang, Central Java",
+  "field": "Software Engineer & Web Developer",
+  "university": "Wahid Hasyim University",
+  "program": "Bachelor of Informatics Engineering",
+  "yearEntry": 2022,
+  "yearGraduation": 2026,
+  "gpa": 3.62,
+  "predicate": "Cum Laude",
+  "about": "Fresh graduate with high dedication in software and web development. Has a strong programming foundation and ready to face challenges in the tech industry.",
+  "socialLinks": {
+    "github": "https://github.com/alfrzy",
+    "linkedin": "https://linkedin.com/in/alifatur-al-farizi",
+    "instagram": "https://instagram.com/alftr.alfrzy"
+  },
+  "skills": {
+    "languages": ["Python", "JavaScript", "Java", "PHP", "SQL", "C++"],
+    "frontend": ["React", "Vue.js", "Tailwind CSS", "HTML/CSS", "Bootstrap"],
+    "backend": ["Node.js", "Express", "Laravel", "Flask", "Django"],
+    "database": ["MySQL", "MongoDB", "PostgreSQL", "SQLite"],
+    "tools": ["Git/GitHub", "VS Code", "Docker", "Linux", "Postman"],
+    "softSkills": {
+      "teamwork": 95,
+      "problemSolving": 90,
+      "communication": 85,
+      "fastLearning": 92,
+      "adaptability": 88
+    }
+  },
+  "education": {
+    "relevantCourses": [
+      "Web Programming (Frontend & Backend)",
+      "Database & SQL",
+      "Algorithms & Data Structures",
+      "Software Engineering",
+      "Operating Systems & Linux",
+      "Computer Networks",
+      "Information Security",
+      "Mobile Programming"
+    ],
+    "workExperience": [
+      {
+        "companyName": "Azura Labs Semarang",
+        "role": "Software Engineer Intern",
+        "period": "September 2024 - November 2024",
+        "description": "Completed a 3-month internship as a Software Engineer involved in web application development and maintenance. Contributed to feature implementation, debugging, database/API integration, and system testing to ensure the system runs according to requirements. Worked collaboratively with the team to understand technical needs, solve problems, and apply software development practices."
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "name": "Essay Exam Scoring System",
+      "description": "Final Project (Thesis) - Full-stack essay exam scoring system using Cosine Similarity and Semantic Scoring to help educators assign grades to students.",
+      "techStack": ["Laravel", "MySQL", "Blade"],
+      "github": "https://github.com/alfrzy/tugas-akhir",
+      "icon": "fa-laptop-code",
+      "gradient": "from-purple-400 to-blue-500"
+    },
+    {
+      "id": 2,
+      "name": "Partner In Crime",
+      "description": "Web-based app to find activity partners for daily tasks. Helps users find friends for shared activities with an intuitive matching system.",
+      "techStack": ["React", "Capacitor", "Node.js", "PostgreSQL", "Tailwind CSS"],
+      "github": "https://github.com/alfrzy/partner-in-crime",
+      "icon": "fa-handshake",
+      "gradient": "from-blue-400 to-green-500"
+    },
+    {
+      "id": 3,
+      "name": "Campus Decision Support System (DSS)",
+      "description": "Decision support system for campus cleaning - Web app that helps with scheduling and optimization of campus cleaning using decision support algorithms.",
+      "techStack": ["PHP", "MySQL"],
+      "github": "https://github.com/alfrzy/spk",
+      "icon": "fa-chart-bar",
+      "gradient": "from-green-400 to-blue-500"
+    },
+    {
+      "id": 4,
+      "name": "Open Course Platform",
+      "description": "Open online learning platform developed as an internship project at Azura Labs Semarang. Features include course management, learning materials, and dynamic user interaction.",
+      "techStack": ["JavaScript", "Node.js", "MySQL"],
+      "github": "https://github.com/alfrzy/open-course",
+      "icon": "fa-graduation-cap",
+      "gradient": "from-yellow-400 to-orange-500"
+    },
+    {
+      "id": 5,
+      "name": "Rebranding School",
+      "description": "Web app for school visual identity and branding management. Helps schools design, store, and manage branding assets and brand guideline usage.",
+      "techStack": ["PHP", "MySQL"],
+      "github": "https://github.com/alfrzy/rebranding-school",
+      "icon": "fa-palette",
+      "gradient": "from-pink-400 to-red-500"
+    },
+    {
+      "id": 6,
+      "name": "Portfolio Website",
+      "description": "Personal portfolio website with modern and responsive design. Showcases projects, skills, and experience as a fresh graduate software engineer with optimal UX.",
+      "techStack": ["HTML", "CSS", "JavaScript"],
+      "github": "https://github.com/alfrzy/alfrzy.github.io",
+      "icon": "fa-globe",
+      "gradient": "from-indigo-400 to-purple-500"
+    }
+  ]
+}
