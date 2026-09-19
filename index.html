@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alifatur Al Farizi® — Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#1632F0',
+                        brandDeep: '#0C22C5',
+                        cream: '#FBFBFB',
+                        midnight: '#121212',
+                        surface: '#1A1A1A',
+                        zinc: '#71717A',
+                        slate: '#94A3B8',
+                        borderGrid: '#E4E4E7'
+                    },
+                    fontFamily: {
+                        display: ['Space Grotesk', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                        body: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream">
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 glass-sticky border-b border-borderGrid">
+    <div class="max-w-[1720px] mx-auto px-6 lg:px-10 h-[64px] flex items-center justify-between">
+        <a href="#home" class="massive text-[22px] tracking-tighter flex items-center gap-1">AF<span class="text-brand text-[11px] align-super inline-block transition-transform duration-500 hover:rotate-[360deg]">®</span></a>
+        <div class="hidden lg:flex items-center gap-8 mono text-[11px] font-medium">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Stack</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <span class="hidden md:inline mono text-[11px] text-zinc">Semarang — ID</span>
+            <a href="mailto:alifaturalfarizi155@email.com" class="magnetic-elem hidden md:inline-flex mono text-[11px] bg-brand text-white px-5 py-2.5 hover:bg-brandDeep transition">Hire Me</a>
+            <button id="menuBtn" class="lg:hidden w-10 h-10 grid place-items-center border border-borderGrid"><i class="fas fa-bars text-sm"></i></button>
+        </div>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-borderGrid px-6 py-6 space-y-4 mono text-[11px] bg-cream">
+        <a href="#about">About</a><a href="#skills">Stack</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="pt-[64px]" data-animation="scroll-fade-in">
+    <div class="max-w-[1720px] mx-auto px-6 lg:px-10">
+        <div class="border-x border-borderGrid">
+            <div class="grid lg:grid-cols-[1.15fr_0.85fr] border-b border-borderGrid">
+                <div class="px-6 lg:px-10 py-10 lg:py-14 flex flex-col justify-between" data-stagger>
+                    <div data-hero-item>
+                        <div class="flex items-center gap-3 mono text-[11px] mb-8">
+                            <span class="w-2 h-2 bg-brand rounded-full animate-pulse"></span>
+                            <span>Available for Work — Entry Level</span>
+                            <span class="ml-auto hidden sm:inline text-zinc">©2026 / Bachelor of Informatics</span>
+                        </div>
+                        <h1 class="massive hero-title font-black uppercase text-brand">
+                            ALIFATUR<span class="inline-block text-[0.35em] align-super ml-1 font-bold">®</span><br>
+                            <span class="text-midnight">AL FARIZI</span>
+                        </h1>
+                        <div class="mt-6 flex flex-wrap gap-2 mono text-[11px]">
+                            <span class="border border-borderGrid px-3 py-1.5">Software Engineer</span>
+                            <span class="border border-borderGrid px-3 py-1.5">Web Developer</span>
+                            <span class="bg-brand text-white px-3 py-1.5">Fresh Graduate</span>
+                        </div>
+                    </div>
+                    <div class="mt-10 grid sm:grid-cols-[1.4fr_0.6fr] gap-6 items-end">
+                        <p class="text-[15px] leading-[1.6] text-zinc max-w-[46ch]" data-hero-item>
+                            Bachelor's graduate in Informatics Engineering from Wahid Hasyim University. Focused on full-stack web development with strong programming foundation and collaborative spirit.
+                        </p>
+                        <div class="flex flex-col gap-3" data-hero-item>
+                            <a href="#projects" class="magnetic-elem bg-brand text-white mono text-[11px] px-6 py-4 text-center hover:bg-brandDeep transition">View Projects</a>
+                            <a href="https://drive.google.com/file/d/10f7og428_UdPUl_twXqRia9WmjOvyyRM/view?usp=drive_link" class="magnetic-elem border border-midnight mono text-[11px] px-6 py-4 text-center hover:bg-midnight hover:text-white transition"> Download CV</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="border-t lg:border-t-0 lg:border-l border-borderGrid p-6 lg:p-8 flex flex-col gap-6 bg-white" data-hero-item>
+                    <div class="relative overflow-hidden bg-surface aspect-[4/5] shimmer">
+                        <img src="assets/images/foto.jpeg" alt="profile" class="w-full h-full object-cover opacity-90">
+                        <div class="absolute inset-0 bg-brand mix-blend-multiply opacity-[0.55]"></div>
+                        <div class="absolute inset-0 opacity-20" style="background:linear-gradient(90deg,transparent,rgba(0,229,255,.6),transparent);filter:blur(18px)"></div>
+                        <div class="absolute bottom-0 left-0 right-0 p-4 flex justify-between items-end mono text-[10px] text-white">
+                        </div>
+                    </div>
+                    <div class="barcode-wrap h-[92px] grid place-items-center p-3">
+                        <div class="w-full">
+                            <div class="flex justify-between mono text-[10px] text-zinc mb-2"><span>SCAN — PORTFOLIO</span><span>AF-2026</span></div>
+                            <div class="h-[36px] flex gap-[2px] items-end">
+                                <div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[60%] bg-midnight"></div><div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[40%] bg-midnight"></div><div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[70%] bg-midnight"></div><div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[50%] bg-midnight"></div><div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[65%] bg-midnight"></div><div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[45%] bg-midnight"></div><div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[75%] bg-midnight"></div><div class="flex-1 h-full bg-midnight"></div><div class="flex-1 h-[55%] bg-midnight"></div>
+                            </div>
+                        </div>
+                        <div class="barcode-laser"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 divide-x divide-borderGrid border-b border-borderGrid mono text-[11px]" data-stagger>
+            <div class="px-6 lg:px-10 py-6 flex justify-between items-center"><span class="text-zinc">Current Projects</span><span class="massive text-[28px] leading-none">06</span></div>
+            <div class="px-6 lg:px-10 py-6 flex justify-between items-center"><span class="text-zinc">GPA</span><span class="massive text-[28px] leading-none">3.62</span></div>
+            <div class="px-6 lg:px-10 py-6 flex justify-between items-center"><span class="text-zinc">Stack</span><span class="massive text-[28px] leading-none">15+</span></div>
+            <div class="px-6 lg:px-10 py-6 flex justify-between items-center"><span class="text-zinc">Experience</span><span class="massive text-[28px] leading-none">03<span class="text-sm font-mono">MO</span></span></div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="max-w-[1720px] mx-auto px-6 lg:px-10" data-animation="scroll-slide-left">
+    <div class="border-x border-borderGrid">
+        <div class="grid lg:grid-cols-[0.9fr_1.1fr] border-b border-borderGrid">
+            <div class="p-6 lg:p-10 border-b lg:border-b-0 lg:border-r border-borderGrid" data-stagger-item>
+                <p class="mono text-[11px] text-brand mb-4">01 — About</p>
+                <h2 class="massive text-[42px] lg:text-[64px] uppercase leading-none">Dedicated<br>Engineer</h2>
+            </div>
+            <div class="p-6 lg:p-10" data-stagger-item>
+                <p class="text-[16px] leading-7 text-midnight">
+                    Fresh graduate in Informatics Engineering from Wahid Hasyim University with high dedication to software and web development. Strong programming foundation through academic & personal projects, ready to collaborate and learn the latest technologies.
+                </p>
+                <div class="mt-8 grid grid-cols-2 gap-0 border border-borderGrid">
+                    <div class="p-4 border-r border-b border-borderGrid"><p class="mono text-[10px] text-zinc">University</p><p class="font-bold text-sm mt-1">Wahid Hasyim University</p></div>
+                    <div class="p-4 border-b border-borderGrid"><p class="mono text-[10px] text-zinc">Program</p><p class="font-bold text-sm mt-1">Bachelor of Informatics</p></div>
+                    <div class="p-4 border-r border-borderGrid"><p class="mono text-[10px] text-zinc">Period</p><p class="font-bold text-sm mt-1">2022 — 2026</p></div>
+                    <div class="p-4"><p class="mono text-[10px] text-zinc">Location</p><p class="font-bold text-sm mt-1">Semarang, Central Java</p></div>
+                </div>
+                <div class="mt-6 flex flex-wrap gap-2 mono text-[11px]">
+                    <span class="bg-midnight text-white px-3 py-2">GPA 3.62 / 4.00</span>
+                    <span class="border border-borderGrid px-3 py-2">Cum Laude</span>
+                    <span class="border border-borderGrid px-3 py-2">Thesis: Essay Scoring System</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="max-w-[1720px] mx-auto px-6 lg:px-10" data-animation="scroll-slide-right">
+    <div class="border-x border-t-0 border border-borderGrid">
+        <div class="px-6 lg:px-10 py-8 border-b border-borderGrid flex justify-between items-end">
+            <h2 class="massive text-[28px] lg:text-[40px] uppercase">Stack & Expertise</h2>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-borderGrid" data-stagger>
+            <div class="p-6 lg:p-8 hover:bg-[#EAEFEF] transition" data-stagger-item>
+                <p class="mono text-[11px] text-brand mb-4">01 — Languages</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Python</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">JavaScript</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Java</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">PHP</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">SQL</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">C++</span>
+                </div>
+            </div>
+            <div class="p-6 lg:p-8 hover:bg-[#EAEFEF] transition" data-stagger-item>
+                <p class="mono text-[11px] text-brand mb-4">02 — Frontend</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">React</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Vue.js</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Tailwind CSS</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">HTML/CSS</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Bootstrap</span>
+                </div>
+            </div>
+            <div class="p-6 lg:p-8 hover:bg-[#EAEFEF] transition" data-stagger-item>
+                <p class="mono text-[11px] text-brand mb-4">03 — Backend</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Node.js</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Express</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Laravel</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Flask</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Django</span>
+                </div>
+            </div>
+            <div class="p-6 lg:p-8 hover:bg-[#EAEFEF] transition" data-stagger-item>
+                <p class="mono text-[11px] text-brand mb-4">04 — Database</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">MySQL</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">MongoDB</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">PostgreSQL</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">SQLite</span>
+                </div>
+            </div>
+            <div class="p-6 lg:p-8 hover:bg-[#EAEFEF] transition" data-stagger-item>
+                <p class="mono text-[11px] text-brand mb-4">05 — Tools</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Git/GitHub</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">VS Code</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Docker</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Linux</span>
+                    <span class="mono text-[11px] border border-borderGrid px-3 py-1.5 bg-white">Postman</span>
+                </div>
+            </div>
+            <div class="p-6 lg:p-8 hover:bg-[#EAEFEF] transition" data-stagger-item>
+                <p class="mono text-[11px] text-brand mb-4">06 — Soft Skills</p>
+                <div class="space-y-3 mono text-[11px]">
+                    <div><div class="flex justify-between"><span>Teamwork</span><span class="text-brand">95%</span></div><div class="h-1 bg-borderGrid mt-1"><div class="h-full bg-brand" style="width:95%"></div></div></div>
+                    <div><div class="flex justify-between"><span>Problem Solving</span><span class="text-brand">90%</span></div><div class="h-1 bg-borderGrid mt-1"><div class="h-full bg-brand" style="width:90%"></div></div></div>
+                    <div><div class="flex justify-between"><span>Fast Learning</span><span class="text-brand">92%</span></div><div class="h-1 bg-borderGrid mt-1"><div class="h-full bg-brand" style="width:92%"></div></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="max-w-[1720px] mx-auto px-6 lg:px-10 mt-10" data-animation="scroll-scale-in">
+    <div class="project-card-blue p-6 lg:p-10" data-stagger>
+        <div class="flex flex-wrap justify-between items-end gap-4">
+            <div>
+                <p class="mono text-[11px] text-white/70">Curated Portfolio — Current Projects</p>
+                <h2 class="massive text-[36px] lg:text-[56px] uppercase leading-none text-white mt-2">Selected Works</h2>
+            </div>
+            <p class="mono text-[11px] text-white/70 max-w-[38ch]">Full-stack exploration: automated essay scoring, social matching, decision support system, to education platform.</p>
+        </div>
+    </div>
+    <div class="border-x border-b border-borderGrid grid md:grid-cols-2 lg:grid-cols-3 divide-x divide-y divide-borderGrid bg-white" data-stagger>
+        <div class="p-6 flex flex-col gap-4 shimmer group hover:bg-[#F4F4F5] transition" data-stagger-item>
+            <div class="flex justify-between mono text-[11px]"><span class="text-brand">01 / Web App — Thesis</span><span class="text-zinc">2026</span></div>
+            <div class="aspect-[4/3] bg-surface grid place-items-center border border-borderGrid"><img src="assets/images/project1.png" alt="project1" class="w-full h-full object-cover opacity-90"></i></div>
+            <h3 class="massive text-[20px] uppercase leading-none">Essay Scoring System</h3>
+            <p class="text-sm leading-6 text-zinc">Cosine Similarity & Semantic Scoring for automated essay exam scoring for educators.</p>
+            <div class="flex flex-wrap gap-2 mono text-[10px]"><span class="border border-borderGrid px-2 py-1 bg-white">Laravel</span><span class="border border-borderGrid px-2 py-1 bg-white">MySQL</span><span class="border border-borderGrid px-2 py-1 bg-white">Blade</span></div>
+            <div class="flex gap-2 mt-auto">
+                <a href="https://github.com/alfrzy/tugas-akhir" target="_blank" class="magnetic-elem flex-1 text-center mono text-[11px] border border-midnight py-2.5 hover:bg-midnight hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 shimmer group hover:bg-[#F4F4F5] transition" data-stagger-item>
+            <div class="flex justify-between mono text-[11px]"><span class="text-brand">02 / Web App</span><span class="text-zinc">2025</span></div>
+            <div class="aspect-[4/3] bg-surface grid place-items-center border border-borderGrid"><img src="assets/images/project2.png" alt="project2" class="w-full h-full object-cover opacity-90"></i></div>
+            <h3 class="massive text-[20px] uppercase leading-none">Partner In Crime</h3>
+            <p class="text-sm leading-6 text-zinc">Daily activity partner search platform with intuitive matching system.</p>
+            <div class="flex flex-wrap gap-2 mono text-[10px]"><span class="border border-borderGrid px-2 py-1 bg-white">React</span><span class="border border-borderGrid px-2 py-1 bg-white">Node.js</span><span class="border border-borderGrid px-2 py-1 bg-white">PostgreSQL</span></div>
+            <div class="flex gap-2 mt-auto">
+                <a href="https://github.com/alfrzy/partner-in-crime" target="_blank" class="magnetic-elem flex-1 text-center mono text-[11px] border border-midnight py-2.5 hover:bg-midnight hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 shimmer group hover:bg-[#F4F4F5] transition" data-stagger-item>
+            <div class="flex justify-between mono text-[11px]"><span class="text-brand">03 / Decision Support</span><span class="text-zinc">2025</span></div>
+            <div class="aspect-[4/3] bg-surface grid place-items-center border border-borderGrid"><img src="assets/images/project3.png" alt="project3" class="w-full h-full object-cover opacity-90"></i></div>
+            <h3 class="massive text-[20px] uppercase leading-none">Campus DSS</h3>
+            <p class="text-sm leading-6 text-zinc">Decision support system for campus cleaning scheduling & optimization.</p>
+            <div class="flex flex-wrap gap-2 mono text-[10px]"><span class="border border-borderGrid px-2 py-1 bg-white">PHP</span><span class="border border-borderGrid px-2 py-1 bg-white">MySQL</span></div>
+            <div class="flex gap-2 mt-auto">
+                <a href="https://github.com/alfrzy/spk" target="_blank" class="magnetic-elem flex-1 text-center mono text-[11px] border border-midnight py-2.5 hover:bg-midnight hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 shimmer group hover:bg-[#F4F4F5] transition" data-stagger-item>
+            <div class="flex justify-between mono text-[11px]"><span class="text-brand">04 / LMS — Internship</span><span class="text-zinc">2024</span></div>
+            <div class="aspect-[4/3] bg-surface grid place-items-center border border-borderGrid"><img src="assets/images/project4.png" alt="project4" class="w-full h-full object-cover opacity-90"></i></div>
+            <h3 class="massive text-[20px] uppercase leading-none">Open Course</h3>
+            <p class="text-sm leading-6 text-zinc">Open course platform from Azura Labs internship — material management & dynamic interaction.</p>
+            <div class="flex flex-wrap gap-2 mono text-[10px]"><span class="border border-borderGrid px-2 py-1 bg-white">JavaScript</span><span class="border border-borderGrid px-2 py-1 bg-white">Node.js</span><span class="border border-borderGrid px-2 py-1 bg-white">MySQL</span></div>
+            <div class="flex gap-2 mt-auto">
+                <a href="https://github.com/alfrzy/open-course" target="_blank" class="magnetic-elem flex-1 text-center mono text-[11px] border border-midnight py-2.5 hover:bg-midnight hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 shimmer group hover:bg-[#F4F4F5] transition" data-stagger-item>
+            <div class="flex justify-between mono text-[11px]"><span class="text-brand">05 / Branding</span><span class="text-zinc">2025</span></div>
+            <div class="aspect-[4/3] bg-surface grid place-items-center border border-borderGrid"><img src="assets/images/project5.png" alt="project5" class="w-full h-full object-cover opacity-90"></i></div>
+            <h3 class="massive text-[20px] uppercase leading-none">Rebranding School</h3>
+            <p class="text-sm leading-6 text-zinc">School visual identity management & brand guideline asset manager.</p>
+            <div class="flex flex-wrap gap-2 mono text-[10px]"><span class="border border-borderGrid px-2 py-1 bg-white">PHP</span><span class="border border-borderGrid px-2 py-1 bg-white">MySQL</span></div>
+            <div class="flex gap-2 mt-auto">
+                <a href="https://github.com/alfrzy/rebranding-school" target="_blank" class="magnetic-elem flex-1 text-center mono text-[11px] border border-midnight py-2.5 hover:bg-midnight hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+        <div class="p-6 flex flex-col gap-4 shimmer group hover:bg-[#F4F4F5] transition" data-stagger-item>
+            <div class="flex justify-between mono text-[11px]"><span class="text-brand">06 / Portfolio</span><span class="text-zinc">2025</span></div>
+            <div class="aspect-[4/3] bg-surface grid place-items-center border border-borderGrid"><img src="assets/images/project6.png" alt="project6" class="w-full h-full object-cover opacity-90"></i></i></div>
+            <h3 class="massive text-[20px] uppercase leading-none">Portfolio Website</h3>
+            <p class="text-sm leading-6 text-zinc">Modern & responsive company portfolio showcase for works and expertise.</p>
+            <div class="flex flex-wrap gap-2 mono text-[10px]"><span class="border border-borderGrid px-2 py-1 bg-white">HTML</span><span class="border border-borderGrid px-2 py-1 bg-white">CSS</span><span class="border border-borderGrid px-2 py-1 bg-white">JavaScript</span></div>
+            <div class="flex gap-2 mt-auto">
+                <a href="https://github.com/Milfhy/milfhy-bento-grid-web" target="_blank" class="magnetic-elem flex-1 text-center mono text-[11px] border border-midnight py-2.5 hover:bg-midnight hover:text-white transition">GitHub</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="max-w-[1720px] mx-auto px-6 lg:px-10 mt-10" data-animation="scroll-slide-left">
+    <div class="border border-borderGrid">
+        <div class="px-6 lg:px-10 py-8 border-b border-borderGrid flex justify-between items-end">
+            <h2 class="massive text-[28px] lg:text-[40px] uppercase">Experience & Education</h2>
+            <p class="mono text-[11px] text-zinc">Timeline — 2022 → 2026</p>
+        </div>
+        <div class="divide-y divide-borderGrid">
+            <div class="grid lg:grid-cols-[220px_1fr] group hover:bg-[#F4F4F5] transition" data-stagger-item>
+                <div class="p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-borderGrid">
+                    <p class="mono text-[11px] text-brand">2024 — 3 Months</p>
+                    <p class="mono text-[11px] text-zinc mt-1">Internship</p>
+                </div>
+                <div class="p-6 lg:p-8">
+                    <div class="flex flex-wrap justify-between gap-2">
+                        <h3 class="font-black uppercase text-lg">Software Engineer Intern — Azura Labs Semarang</h3>
+                        <span class="mono text-[11px] border border-borderGrid px-3 py-1 bg-white">Sept — Nov 2024</span>
+                    </div>
+                    <p class="text-sm text-zinc leading-6 mt-3">Web application development & maintenance: feature implementation, debugging, database/API integration, system testing, and team collaboration with best software engineering practices.</p>
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-[220px_1fr] group hover:bg-[#F4F4F5] transition" data-stagger-item>
+                <div class="p-6 lg:p-8 border-b lg:border-b-0 lg:border-r border-borderGrid">
+                    <p class="mono text-[11px] text-brand">2022 — 2026</p>
+                    <p class="mono text-[11px] text-zinc mt-1">Education</p>
+                </div>
+                <div class="p-6 lg:p-8">
+                    <div class="flex flex-wrap justify-between gap-2">
+                        <h3 class="font-black uppercase text-lg">Bachelor of Informatics — Wahid Hasyim University</h3>
+                        <span class="mono text-[11px] bg-midnight text-white px-3 py-1">GPA 3.62 — Cum Laude</span>
+                    </div>
+                    <p class="text-sm text-zinc leading-6 mt-2">Thesis: Essay Exam Scoring System (Cosine Similarity & Semantic Scoring).</p>
+                    <div class="mt-4 flex flex-wrap gap-2 mono text-[10px]">
+                        <span class="border border-borderGrid px-2 py-1 bg-white">Web Programming</span><span class="border border-borderGrid px-2 py-1 bg-white">Database</span><span class="border border-borderGrid px-2 py-1 bg-white">Algorithms</span><span class="border border-borderGrid px-2 py-1 bg-white">Software Engineering</span><span class="border border-borderGrid px-2 py-1 bg-white">Information Security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="max-w-[1720px] mx-auto px-6 lg:px-10 mt-10" data-animation="scroll-scale-in">
+    <div class="grid lg:grid-cols-[1fr_1.1fr] border border-borderGrid bg-white">
+        <div class="p-6 lg:p-10 border-b lg:border-b-0 lg:border-r border-borderGrid">
+            <p class="mono text-[11px] text-brand">Contact — Let's Talk</p>
+            <h2 class="massive text-[36px] lg:text-[48px] uppercase leading-none mt-2">Hire<br>Me.</h2>
+            <p class="text-sm text-zinc leading-6 mt-4 max-w-[38ch]">Open for entry-level roles, collaboration, and tech discussions. Contact via email, WhatsApp, or form.</p>
+            <div class="mt-8 space-y-0 border border-borderGrid divide-y divide-borderGrid">
+                <a href="mailto:alifaturalfarizi155@email.com" class="flex justify-between items-center p-4 hover:bg-[#F4F4F5] transition mono text-[11px]"><span class="text-zinc">Email</span><span class="font-semibold">alifaturalfarizi155@email.com →</span></a>
+                <a href="tel:+6281548367437" class="flex justify-between items-center p-4 hover:bg-[#F4F4F5] transition mono text-[11px]"><span class="text-zinc">Phone / WhatsApp</span><span class="font-semibold">+62 815 4836 7437 →</span></a>
+                <div class="flex justify-between items-center p-4 mono text-[11px]"><span class="text-zinc">Location</span><span class="font-semibold">Semarang, Central Java</span></div>
+            </div>
+            <div class="flex gap-3 mt-6">
+                <a href="https://github.com/alfrzy" target="_blank" class="w-10 h-10 grid place-items-center border border-borderGrid hover:bg-midnight hover:text-white transition"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/alifatur-al-farizi" target="_blank" class="w-10 h-10 grid place-items-center border border-borderGrid hover:bg-midnight hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                <a href="https://instagram.com/alftr.alfrzy" target="_blank" class="w-10 h-10 grid place-items-center border border-borderGrid hover:bg-midnight hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <form id="contactForm" class="p-6 lg:p-10 bg-[#F9F9F9]">
+            <div class="grid sm:grid-cols-2 gap-4">
+                <div><label class="mono text-[11px]">Name</label><input required type="text" placeholder="Your Name" class="mt-2 w-full border border-borderGrid bg-white px-4 py-3 text-sm focus:outline-none focus:border-brand"></div>
+                <div><label class="mono text-[11px]">Email</label><input required type="email" placeholder="email@domain.com" class="mt-2 w-full border border-borderGrid bg-white px-4 py-3 text-sm focus:outline-none focus:border-brand"></div>
+            </div>
+            <div class="mt-4"><label class="mono text-[11px]">Subject</label><input required type="text" placeholder="Subject" class="mt-2 w-full border border-borderGrid bg-white px-4 py-3 text-sm focus:outline-none focus:border-brand"></div>
+            <div class="mt-4"><label class="mono text-[11px]">Message</label><textarea required rows="5" placeholder="Write your message..." class="mt-2 w-full border border-borderGrid bg-white px-4 py-3 text-sm focus:outline-none focus:border-brand resize-none"></textarea></div>
+            <button type="submit" class="magnetic-elem mt-6 w-full bg-brand text-white mono text-[11px] py-4 hover:bg-brandDeep transition">Send Message — →</button>
+        </form>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="max-w-[1720px] mx-auto px-6 lg:px-10 mt-10">
+    <div class="bg-midnight text-white overflow-hidden">
+        <h2 class="massive footer-title font-black uppercase text-center py-6 lg:py-10 select-none transition-all duration-500 hover:tracking-[-0.01em] hover:text-brand">ALFARIZI®</h2>
+        <div class="border-t border-white/10 px-6 lg:px-10 py-6 flex flex-col md:flex-row justify-between gap-4 mono text-[11px] text-white/60">
+            <span>© 2026 Alifatur Al Farizi — Semarang, ID</span>
+            <span>Built with HTML · Tailwind · JavaScript </span>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script>
+// === CURSOR SYSTEM ===
+(function() {
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    if (!dot || !ring) return;
+    
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mx = e.clientX;
+        my = e.clientY;
+        dot.style.left = mx + 'px';
+        dot.style.top = my + 'px';
+    });
+    
+    function animate() {
+        rx += (mx - rx) * 0.16;
+        ry += (my - ry) * 0.16;
+        ring.style.left = rx + 'px';
+        ring.style.top = ry + 'px';
+        requestAnimationFrame(animate);
+    }
+    animate();
+    
+    document.querySelectorAll('a, button, .shimmer, h1, h2').forEach((el) => {
+        el.addEventListener('mouseenter', () => ring.classList.add('cursor-active'));
+        el.addEventListener('mouseleave', () => ring.classList.remove('cursor-active'));
+    });
+})();
+
+// === MAGNETIC BUTTONS ===
+(function() {
+    document.querySelectorAll('.magnetic-elem').forEach((btn) => {
+        btn.addEventListener('mousemove', (e) => {
+            const r = btn.getBoundingClientRect();
+            const x = e.clientX - r.left - r.width / 2;
+            const y = e.clientY - r.top - r.height / 2;
+            btn.style.transform = `translate(${x * 0.22}px, ${y * 0.22}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0, 0)';
+        });
+    });
+})();
+
+// === MOBILE MENU ===
+(function() {
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobileMenu a').forEach((a) => {
+            a.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+})();
+
+// === CONTACT FORM ===
+(function() {
+    const form = document.getElementById('contactForm');
+    if (form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you! Your message has been sent.');
+            form.reset();
+        });
+    }
+})();
+
+// === SCROLL ANIMATIONS ===
+(function() {
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.remove('scroll-fade-in', 'scroll-slide-left', 'scroll-slide-right', 'scroll-scale-in');
+                void entry.target.offsetWidth;
+                const animType = entry.target.dataset.animation || 'scroll-fade-in';
+                entry.target.classList.add(animType);
+            } else {
+                entry.target.classList.remove('scroll-fade-in', 'scroll-slide-left', 'scroll-slide-right', 'scroll-scale-in');
+                entry.target.style.animation = 'none';
+            }
+        });
+    }, observerOptions);
+    document.querySelectorAll('[data-animation]').forEach((el) => observer.observe(el));
+})();
+
+// === SECTION TRANSITIONS ===
+(function() {
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        section.style.opacity = '0';
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setTimeout(() => {
+                    section.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+                    section.style.opacity = '1';
+                }, index * 50);
+            } else {
+                section.style.opacity = '0';
+                section.style.transition = 'none';
+            }
+        }, { threshold: 0.1 });
+        observer.observe(section);
+    });
+})();
+
+// === STAGGER ANIMATIONS ===
+(function() {
+    const containers = document.querySelectorAll('[data-stagger]');
+    containers.forEach((container) => {
+        const children = container.querySelectorAll('[data-stagger-item]');
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                children.forEach((child, index) => {
+                    setTimeout(() => {
+                        child.style.animation = 'none';
+                        void child.offsetWidth;
+                        child.style.animation = 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+                    }, index * 80);
+                });
+            } else {
+                children.forEach((child) => {
+                    child.style.animation = 'none';
+                });
+            }
+        }, { threshold: 0.1 });
+        observer.observe(container);
+    });
+})();
+
+// === HERO ANIMATION ===
+(function() {
+    window.addEventListener('load', () => {
+        const hero = document.querySelector('section#home');
+        if (hero) {
+            const elements = hero.querySelectorAll('[data-hero-item]');
+            elements.forEach((el, index) => {
+                setTimeout(() => {
+                    el.style.animation = 'none';
+                    void el.offsetWidth;
+                    el.style.animation = 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards';
+                }, index * 120);
+            });
+        }
+    });
+})();
+
+// === RESET ON SCROLL UP ===
+(function() {
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll < lastScrollY && currentScroll < 100) {
+            document.querySelectorAll('[data-animation]').forEach((el) => {
+                el.classList.remove('scroll-fade-in', 'scroll-slide-left', 'scroll-slide-right', 'scroll-scale-in');
+                el.style.animation = 'none';
+            });
+        }
+        lastScrollY = currentScroll;
+    });
+})();
+</script>
+</body>
+</html>
