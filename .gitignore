@@ -27,8 +27,6 @@ node_modules/
 dist/
 build/
 
-# Private / personal (uncomment sesuai kebutuhan)
-# assets/images/foto.jpeg
-# assets/cv/
-# *.pdf
-# private/
+# documentation and data
+*.md
+data.json
